@@ -1,1 +1,6 @@
-<p>poke-card works!</p>
+<div *ngFor="let pokemon of pokemons">
+    <div id="card" (click)="pokemon.forms_switchable = !pokemon.forms_switchable">
+        <span *ngIf="pokemon.forms_switchable; else elseBlock">{{pokemon.name}}</span>
+        <ng-template #elseBlock>switchable form</ng-template>
+    </div>
+  </div>
